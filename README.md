@@ -68,3 +68,39 @@ Dự án **AI TestOps** giúp tự động hoá toàn bộ quá trình kiểm th
 
 Ví dụ minh họa kiến trúc TestOps:
 
+
+
+Hiển thị:
+
+![AI TestOps Architecture](https://fakeimg.pl/600x250/?text=AI+TestOps+Architecture "Architecture Diagram")
+
+---
+
+## 7. Code
+
+### 7.1 Code inline  
+Dùng cú pháp backtick:  
+Ví dụ: `mvn test`, `pytest`, `docker compose up`
+
+### 7.2 Code block
+
+#### Ví dụ: Lệnh chạy mutation baseline với PIT
+
+```bash
+mvn org.pitest:pitest-maven:mutationCoverage
+
+Code Java demo
+public class Calculator {
+    public int add(int a, int b) {
+        return a + b; // simple mutation target
+    }
+}
+
+JSON Output từ AI TestOps
+{
+  "test_generated": 12,
+  "mutation_score": 0.85,
+  "coverage": "92%"
+}
+
+
